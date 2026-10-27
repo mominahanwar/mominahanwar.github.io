@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1c1c1d"> 
+  <title>Mominah Anwar</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <!--LATER: maybe add an icon for iphone if website saved to home screen-->
+  <meta name="description" content="Portfolio skeleton with banner, skills, projects and experience sections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="#about" class="nav__brand"><strong>mominah.</strong>anwar</a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#about" class="is-active">about</a>
+        <a href="#projects">projects</a>
+        <a href="#certifications">certifications</a>
+        <a href="#skills">skills</a>
+        <a href="#experience">experience</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ BANNER ============ -->
+    <section id="about" class="banner">
+
+      <div class="banner__intro">
+        <p class="status"><span class="status__dot" aria-hidden="true"></span>Open to data analyst roles</p>
+        <h1 class="banner__name">I turn <strong>messy data</strong> into <strong>decisions</strong> people can act on.</h1>
+        <p class="banner__tagline">Power BI (PL-300 Certified) | SQL | Excel</p>
+
+        <div class="banner__bio">
+          <p>
+            Hi there! I am Mominah Anwar.
+          </p>
+          <p>
+            I like to optimise messy data models to reduce load times for users, 
+            as well as create visually appealing reports that tell a story to the reader. 
+            Through my reports, I like to help people make decisions by showing 
+            them what their data is telling them. 
+          </p>
+          <!--<p>
+            Curabitur blandit tempus porttitor. Nullam quis risus eget urna
+            mollis ornare vel eu leo. <a href="#">Another link</a>.
+          </p>-->
+        </div>
+      </div>
+
+
+      <figure class="terminal" aria-label="SQL query selecting the best data analyst from the candidates table">
+        <div class="terminal__bar">
+          <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="terminal__file">candidates.sql</span>
+        </div>
+
+        <pre class="terminal__code"><code id="sql-code"><span class="k">SELECT</span> first_name,
+       last_name,
+       email
+<span class="k">FROM</span>   candidates
+<span class="k">WHERE</span>  role = <span class="s">'data analyst'</span>
+<span class="k">ORDER BY</span> skill <span class="k">DESC</span>
+<span class="k">LIMIT</span>  <span class="n">1</span>;</code><span class="terminal__cursor" aria-hidden="true"></span></pre>
+
+        <p class="terminal__status" aria-hidden="true">Running query…</p>
+
+        <div class="terminal__result">
+          <div class="terminal__table">
+            <table>
+              <thead>
+                <tr><th>first_name</th><th>last_name</th><th>email</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>mominah</td><td>anwar</td><td>mominahanwar0@gmail.com</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="terminal__meta">1 row · 0.02 s</p>
+        </div>
+      </figure>
+
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <h2 class="section__title"><a href="#projects">projects</a></h2>
+
+      <ol class="projects">
+        <li class="project">
+          <div class="project__media">
+            <!--<a href="projects/data-model-optimisation.html" class="project__thumb-link">
+              <img class="project__thumb" src="images/model-optimisation-after.PNG" alt="Optimised data model">
+            </a>-->
+            <img class="project__thumb" src="images/model-optimisation-after.PNG" alt="Optimised data model">
+          </div>
+          <div class="project__body">
+            <h3 class="project__title">
+              <!--<a href="projects/data-model-optimisation.html">Data Model Optimisation</a>-->
+              Data Model Optimisation
+            </h3>
+            <p class="project__meta">Power BI, Power Query, DAX</p>
+            <p class="project__where"><em>Data model redesign, personal project</em></p>
+            <div class="project__btns">
+              <a href="images/model-optimisation-before.PNG" class="btn" target="_blank">View Before</a>
+              <a href="images/model-optimisation-after.PNG" class="btn" target="_blank">View After</a>
+              <a href="files/optimised-data-model.pbix" class="btn" download="Optimised Data Model.xlsx">Download</a>
+            </div>
+            <p class="project__desc">
+              I cleaned up a complex and messy data model with slow report load times using the star schema. 
+              I extracted 6 facts and 6 dimensions from the data model, reducing the model size by 25%. 
+              I also created common measures for the model using DAX. 
+
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="project__media">
+            <img class="project__thumb" src="images/coffee-sales-dashboard.png" alt="Dashboard showing coffee sales">
+          </div>
+          <div class="project__body">
+            <h3 class="project__title">Coffee Sales Dashboard</h3>
+            <p class="project__meta">Excel, Pivot Tables, XLOOKUP, INDEX & MATCH, Slicers</p>
+            <p class="project__where"><em>Interactive sales dashboard, guided project</em></p>
+            <div class="project__btns">
+              <a href="https://pern-my.sharepoint.com/:x:/g/personal/22100316_lums_edu_pk/IQBqS9RzlUnCT5hG4bwwaCyNAROr-WsJDR-13ZigdG-ZXWg?e=ldboUf" class="btn" target="_blank">View</a>
+              <a href="files/coffee-sales-dashboard.xlsx" class="btn" download="Coffee Sales Dashboard.xlsx">Download</a>
+            </div>
+            <p class="project__desc">
+              An interactive Excel dashboard tracking coffee sales by month, 
+              country and roast type across 1,000 orders. Built with pivot tables, 
+              XLOOKUP and slicers, so users can filter by year and loyalty status. 
+              It shows that the US accounts for 78% of revenue and that Robusta sells the least.
+            </p>
+          </div>
+        </li>
+
+        <!--<li class="project">
+          <div class="project__media">
+            <div class="project__thumb" role="img" aria-label="Project preview placeholder">preview</div>
+          </div>
+          <div class="project__body">
+            <h3 class="project__title">E-commerce KPI analysis</h3>
+            <p class="project__meta">Power BI, DAX, Power Query</p>
+            <p class="project__where"><em>Category or context</em>, 2025</p>
+            <div class="project__btns">
+              <a href="#" class="btn">Abs</a>
+              <a href="#" class="btn">Code</a>
+            </div>
+            <p class="project__desc">
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+              auctor. Etiam porta sem malesuada magna mollis euismod.
+            </p>
+          </div>
+        </li>-->
+
+
+      </ol>
+    </section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications" class="section">
+  <h2 class="section__title"><a href="#certifications">certifications</a></h2>
+
+  <ul class="certs">
+    <li class="cert">
+      <div class="cert__main">
+        <h3>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h3>
+        <p>Microsoft</p>
+      </div>
+      <div class="cert__side">
+        <span class="cert__date">Oct 2026</span>
+        <a href="https://learn.microsoft.com/en-us/users/mominah-8237/credentials/b8e06f7e77ad3802" class="btn" target="_blank" rel="noopener">Verify</a>
+      </div>
+    </li>
+    <li class="cert">
+      <div class="cert__main">
+        <h3>Unlock Excel VBA and Excel Macros</h3>
+        <p>Udemy</p>
+      </div>
+      <div class="cert__side">
+        <span class="cert__date">Jan 2026</span>
+        <a href="https://www.udemy.com/certificate/UC-0d917fbe-ec22-4658-b5f5-80617bc88c7b/" class="btn" target="_blank" rel="noopener">Verify</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <h2 class="section__title"><a href="#skills">skills</a></h2>
+
+      <div class="skills">
+        <div class="skill">
+          <h3>BI & Reporting</h3>
+          <ul class="chips">
+            <li>Power BI</li><li>DAX</li><li>Power Query</li><li>Data modelling</li><li>Data cleaning</li>
+            <li>Row-Level Security (RLS)</li><li>Dashboard design</li><li>Automated reporting</li><li>Paginated reports</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Data & Programming</h3>
+          <ul class="chips">
+            <li>SQL</li><li>Python</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter</li><li>Git & GitHub</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Spreadsheets</h3>
+          <ul class="chips">
+            <li>Excel</li><li>Pivot tables</li><li>Lookups</li><li>VBA & macros</li><li>Conditional formatting</li><li>Google sheets</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Research & Communication</h3>
+          <ul class="chips">
+            <li>Technical Writing</li><li>Documentation</li><li>Requirements gathering</li>
+            <li>KPI analysis</li><li>User research</li><li>Thematic analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <h2 class="section__title"><a href="#experience">experience</a></h2>
+
+      <div class="table-wrap">
+        <table class="experience">
+          <tbody>
+            <tr>
+              <th scope="row">May 2026 – Present</th>
+              <td>
+                <strong>Freelance Technical Writer</strong> for a Finance & Tech blog
+                <p>Have worked on 25+ articles for my client</p>
+                <p>Ensured quality of each article by reviewing all aspects of the article, including factual correction, reader comprehension, styling and formatting</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Nov 2024 – Mar 2025</th>
+              <td>
+                <strong>LLM Trainer</strong> at <a href="https://www.turing.com/" target="_blank">Turing Enterprises Inc.</a>
+                <p>Trained Microsoft’s and Meta’s LLMs using Reinforcement Learning from Human Feedback</p>
+                <p>Consistently scored 9+/10 on quality checks of my work, placing in top performing employees</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Oct 2022 – Mar 2024</th>
+              <td>
+                <strong>Technical Content Engineer</strong> at <a href="https://www.educative.io/" target="_blank">Educative Axis SMC (Pvt) Ltd.</a>
+                <p>Led 3 projects from start to completion</p>
+                <p>Coordinated with 4 other teams for each project, ensuring smooth delivery</p>
+                <p>Worked on overall 10+ projects, which included working alongside 5+ international authors</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sep 2020 – May 2022</th>
+              <td>
+                <strong>Teaching Assistant</strong> at <a href="https://www.lums.edu.pk" target="_blank">Lahore University of Management Sciences (LUMS)</a>
+                <p>TAed for 4 different courses under 4 different professors</p>
+                <p>Assisted in classes, labs, oversaw course capstone projects, and provided guidance to students where needed</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT LINE ============ -->
+    <section class="contact">
+      <p>If you are interested in working with me, please reach out via <a href="mailto:mominahanwar0@gmail.com">email</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Copyright 2026 Mominah Anwar. Last updated: October 2026.</div>
+  </footer>
+
+</body>
+</html>

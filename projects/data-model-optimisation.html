@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>Data Model Optimisation · First Lastname</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ NAV (links point back to the homepage) ============ -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="nav__brand"><strong>First</strong> Lastname</a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="../index.html#about">about</a>
+        <a href="../index.html#skills">skills</a>
+        <a href="../index.html#projects" class="is-active">projects</a>
+        <a href="../index.html#experience">experience</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container case">
+
+    <a href="../index.html#projects" class="case__back">← Back to projects</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="case__head">
+      <h1 class="case__title">Data Model Optimisation</h1>
+      <p class="case__lede">
+        One-sentence summary of the project: what you did and why it mattered.
+      </p>
+
+      <dl class="case__meta">
+        <!--<div><dt>Role</dt><dd>Data Analyst</dd></div>-->
+        <div><dt>Tools</dt><dd>Power BI, Power Query, DAX, Row-Level Security (RLS)</dd></div>
+        <!--<div><dt>Year</dt><dd>2026</dd></div>-->
+      </dl>
+
+      <div class="project__btns">
+        <a href="#" class="btn" target="_blank" rel="noopener">Dashboard</a>
+        <a href="#" class="btn" target="_blank" rel="noopener">Code</a>
+      </div>
+    </header>
+
+    <!-- ============ MAIN IMAGE ============ -->
+    <figure class="case__hero">
+      <!--<div class="case__placeholder">screenshot</div>-->
+      <!-- Replace the div above with:-->
+      <img src="../images/model-optimisation-after.PNG" alt="Optimised data model">
+      <figcaption>Caption describing the screenshot.</figcaption>
+    </figure>
+
+    <!-- ============ KEY RESULTS ============ -->
+    <section class="case__stats" aria-label="Key results">
+      <div><strong>45s → 8s</strong><span>report load time</span></div>
+      <div><strong>-25%</strong><span>model size</span></div>
+      <div><strong>21 → 11</strong><span>tables consolidated</span></div>
+    </section>
+
+    <!-- ============ DETAILS ============ -->
+    <section class="case__section">
+      <h2>Overview</h2>
+      <p>What the project was, who it was for, and the context.</p>
+    </section>
+
+    <section class="case__section">
+      <h2>The problem</h2>
+      <p>What wasn't working, and why it mattered to the business.</p>
+    </section>
+
+    <section class="case__section">
+      <h2>What I did</h2>
+      <ul>
+        <li>Step or technique one.</li>
+        <li>Step or technique two.</li>
+        <li>Step or technique three.</li>
+      </ul>
+    </section>
+
+    <section class="case__section">
+      <h2>Results</h2>
+      <p>The measurable outcome, and what changed for the people using it.</p>
+    </section>
+
+    <section class="case__section">
+      <h2>What I learned</h2>
+      <p>Optional: one or two takeaways.</p>
+    </section>
+
+    <a href="../index.html#projects" class="case__back">← Back to projects</a>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Copyright 2026 First Lastname.</div>
+  </footer>
+
+</body>
+</html>
